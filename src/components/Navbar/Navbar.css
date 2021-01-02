@@ -55,6 +55,7 @@
 }
 
 .menu-icon {
+  color: #7577fa;
   display: none;
 }
 
@@ -104,6 +105,7 @@
   }
 
   .menu-icon {
+    color: #7577fa;
     display: block;
     position: absolute;
     top: 0;

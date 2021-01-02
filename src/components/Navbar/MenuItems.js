@@ -1,7 +1,7 @@
 export const MenuItems = [
     {
         title: 'Most Active',
-        url: '*',
+        url: 'active',
         cName: 'nav-links'
     },
     {
