@@ -6,7 +6,7 @@ import "./Stock.css";
 
 function Movers() {
   const url =
-    "https://cors-anywhere.herokuapp.com/https://financialmodelingprep.com/api/v3/actives?apikey=e64f2028effcf8d52ac8f66904bdf7dd";
+    "https://financialmodelingprep.com/api/v3/actives?apikey=e64f2028effcf8d52ac8f66904bdf7dd";
 
   const [stocks, setStocks] = useState([]);
   const [search, setSearch] = useState("");
@@ -16,9 +16,7 @@ function Movers() {
     axios
       .get(url, {
         headers: {
-          "Access-Control-Allow-Origin": "*",
-          "Access-Control-Allow-Headers": "Content-Type",
-          "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+          "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
         },
       })
       .then((resp) => {
