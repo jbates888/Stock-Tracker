@@ -15,9 +15,9 @@ const Coin = ({ symbol, price, change, changesPercentage, marketCap }) => {
             <p className="changes green">${change}</p>
           )}
           {change < 0 ? (
-            <p className="changes red">{changesPercentage}%</p>
+            <p className="changesPercentage red">{changesPercentage}%</p>
           ) : (
-            <p className="changes green">{changesPercentage}%</p>
+            <p className="changesPercentage green">{changesPercentage}%</p>
           )}
         </div>
       </div>

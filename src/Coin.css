@@ -4,7 +4,7 @@
 }
 
 .coin-row {
-  width: 80%;
+  width: 70%;
 }
 
 .c-row {
@@ -36,7 +36,7 @@
 .symbol {
   width: 80px;
   text-transform: uppercase;
-  margin-right: 30px;
+  margin-right: 60px;
 }
 
 .price {
@@ -45,6 +45,16 @@
 }
 
 .marketcap {
+  width: 110px;
+  margin-right: 30px;
+}
+
+.changes {
+  width: 110px;
+  margin-right: 30px;
+}
+
+.changesPercentage {
   width: 110px;
   margin-right: 30px;
 }
