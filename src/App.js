@@ -5,8 +5,10 @@ import Movers from "./Movers";
 import Gainers from "./Gainers";
 import Losers from "./Losers";
 import Crypto from "./Crypto";
+import NotFound from "./NotFound";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import StockDetail from "./StockDetail";
+import CyptoDetail from "./CryptoDetail";
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
           <Route path="/losers" exact component={Losers} />
           <Route path="/crypto" exact component={Crypto} />
           <Route path="/stock/:slug" component={StockDetail} />
+          <Route path="/crypto/:slug" component={CyptoDetail} />
+          <Route path="*" component={NotFound} />
         </Switch>
       </div>
     </Router>

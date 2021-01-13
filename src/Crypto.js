@@ -29,9 +29,16 @@ function Crypto() {
     setSearch(e.target.value);
   };
 
-  const filter = stocks.filter((coin) =>
-    coin.symbol.toLowerCase().includes(search.toLowerCase())
-  );
+  const filter = stocks.filter((coin) => {
+    if (coin.name) {
+      return (
+        coin.symbol.toLowerCase().includes(search.toLowerCase()) ||
+        coin.name.toLowerCase().includes(search.toLowerCase())
+      );
+    } else {
+      return coin.symbol.toLowerCase().includes(search.toLowerCase());
+    }
+  });
 
   if (!loading) {
     return (
@@ -52,8 +59,8 @@ function Crypto() {
             <Coin
               key={coin.symbol}
               symbol={coin.symbol}
+              name={coin.name}
               price={coin.price}
-              marketCap={coin.marketCap}
               change={coin.change}
               changesPercentage={coin.changesPercentage}
             />

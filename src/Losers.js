@@ -29,9 +29,16 @@ function Losers() {
     setSearch(e.target.value);
   };
 
-  const filter = stocks.filter((stock) =>
-    stock.ticker.toLowerCase().includes(search.toLowerCase())
-  );
+  const filter = stocks.filter((stocks) => {
+    if (stocks.companyName) {
+      return (
+        stocks.ticker.toLowerCase().includes(search.toLowerCase()) ||
+        stocks.companyName.toLowerCase().includes(search.toLowerCase())
+      );
+    } else {
+      return stocks.ticker.toLowerCase().includes(search.toLowerCase());
+    }
+  });
 
   if (!loading) {
     return (
