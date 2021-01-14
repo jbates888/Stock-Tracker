@@ -44,7 +44,7 @@ function Movers() {
   if (!loading) {
     return (
       <div className="movers-item">
-        <h2 className="title">Most Active Stocs</h2>
+        <h2 className="title">Most Active Stocks</h2>
         <div className="search">
           <form>
             <input
