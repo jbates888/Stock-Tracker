@@ -6,13 +6,13 @@ import Gainers from "./Gainers";
 import Losers from "./Losers";
 import Crypto from "./Crypto";
 import NotFound from "./NotFound";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as HashRouter, Switch, Route } from "react-router-dom";
 import StockDetail from "./StockDetail";
 import CyptoDetail from "./CryptoDetail";
 
 function App() {
   return (
-    <Router>
+    <HashRouter>
       <div className="App">
         <Navbar />
         <Switch>
@@ -26,7 +26,7 @@ function App() {
           <Route path="*" component={NotFound} />
         </Switch>
       </div>
-    </Router>
+    </HashRouter>
   );
 }
 

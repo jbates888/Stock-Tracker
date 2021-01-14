@@ -12,7 +12,7 @@ const Coin = ({ symbol, name, price, change, changesPercentage }) => {
               {symbol ? symbol.replace("USD", "") : symbol}
             </p>
             <p className="name">{name ? name.replace("USD", "") : name}</p>
-            <p className="price">{price ? price.toFixed(3) : price}</p>
+            <p className="price">${price ? price.toFixed(3) : price}</p>
             {change < 0 ? (
               <p className="changes red">
                 ${change ? change.toFixed(5) : change}
